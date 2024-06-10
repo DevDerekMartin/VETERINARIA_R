@@ -1,0 +1,76 @@
+<div id="background">
+    <div id="menu">
+      <p-breadcrumb class="max-w-full" [model]="items" [home]="home"></p-breadcrumb>
+    </div>
+    <br> <br>
+    <div id="form-container">
+      <form [formGroup]="formGroup" class="form">
+        <div class="form-group">
+          <label for="Consulta_FC">Tipo de cita veterinaria</label>
+          <p-cascadeSelect
+            formControlName="Consulta_FC"
+            [options]="Consulta_V"
+            optionLabel="cname"
+            optionGroupLabel="name"
+            [optionGroupChildren]="['states', 'cities']"
+            class="form-control"
+            placeholder="Selecciona una opción"
+          ></p-cascadeSelect>
+        </div>
+        <div class="form-group">
+          <label for="Animal_FC">Tipo de animal</label>
+          <p-dropdown
+            [options]="dropdownOptions"
+            placeholder="Selecciona una opción"
+            formControlName="Animal_FC"
+            class="form-control"
+          ></p-dropdown>
+        </div>
+        <div class="form-group">
+          <label for="Breed_FC">Raza del animal</label>
+          <input
+            pInputText
+            id="breed"
+            formControlName="Breed_FC"
+            class="form-control"
+            placeholder="Ingresa la raza del animal"
+          />
+        </div>
+        <div class="form-group">
+          <label for="Fecha_FC">Fecha de la cita</label>
+          <p-calendar
+            formControlName="Fecha_FC"
+            [showButtonBar]="true"
+            placeholder="Selecciona la fecha"
+            class="form-control"
+          ></p-calendar>
+        </div>
+        <div class="form-group">
+          <label for="Name_FC">Nombre de la mascota</label>
+          <input
+            pInputText
+            id="username"
+            formControlName="Name_FC"
+            class="form-control"
+            placeholder="Ingresa el nombre de la mascota"
+          />
+        </div>
+        <div class="form-group">
+          <label for="Motivo_FC">Motivo de la consulta</label>
+          <textarea
+            id="float-input"
+            rows="8"
+            pInputTextarea
+            formControlName="Motivo_FC"
+            class="form-control"
+            placeholder="Escribe el motivo de la consulta aquí"
+          ></textarea>
+        </div>
+        <div class="button-container">
+          <button type="submit" class="btn btn-primary">Siguiente</button>
+          <button type="button" class="btn btn-secondary">Retroceder</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

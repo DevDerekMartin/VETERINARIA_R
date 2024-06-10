@@ -1,0 +1,36 @@
+/* Estilos para el nav */
+nav {
+    background-color: #007bff; /* Color de fondo del nav */
+    padding: 10px; /* Espaciado interno */
+  }
+  
+  /* Estilos para la lista */
+  .nav-list {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el espacio interno de la lista */
+    margin: 0; /* Elimina el margen externo de la lista */
+  }
+  
+  /* Estilos para los elementos de la lista */
+  .nav-item {
+    display: inline-block; /* Los elementos se muestran en línea */
+    margin-right: 20px; /* Espacio entre elementos */
+  }
+  
+  /* Estilos para los enlaces */
+  .nav-item a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s; /* Transición de color suave */
+  }
+  
+  /* Estilos para el hover de los enlaces */
+  .nav-item a:hover {
+    color: #f8f9fa; /* Cambia el color del texto al pasar el ratón */
+  }
+  
+  /* Estilos para el enlace activo */
+  .nav-item a.active {
+    font-weight: bold; /* Texto en negrita */
+  }
+  

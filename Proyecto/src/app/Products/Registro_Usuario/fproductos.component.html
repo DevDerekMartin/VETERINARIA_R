@@ -1,0 +1,94 @@
+<div class="body">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <div id="Identidad">
+        <!--Nombre-->
+        <div id="Nombre" class="form-group">
+          <label for="firstName">Nombre</label>
+          <input pInputText id="firstName" formControlName="firstName" class="input-text" />
+        </div>
+        <!--Apellido Paterno-->
+        <div id="ApellidoPaterno" class="form-group">
+          <label for="lastNamePaterno">Apellido Paterno</label>
+          <input pInputText id="lastNamePaterno" formControlName="paternalSurname" class="input-text" />
+        </div>
+        <!--Apellido Materno-->
+        <div id="ApellidoMaterno" class="form-group">
+          <label for="lastNameMaterno">Apellido Materno</label>
+          <input pInputText id="lastNameMaterno" formControlName="maternalSurname" class="input-text" />
+        </div>
+      </div>
+      
+      <div id="Fotografia" class="fotografia-section">
+        <!--Foto-->
+        <p-image src="../../../assets/Perfil.jpg" [preview]="true" alt="Image" width="100" height="100" class="profile-image">
+          <ng-template pTemplate="indicator">
+            <i class="pi pi-check"></i>
+          </ng-template>
+        </p-image>
+        <!--Elemento para añadir imagen-->
+        <input type="file" formControlName="photo" class="file-upload" /> <!-- Cambiado aquí -->
+      </div>
+      
+      <!--Ubicacion-->
+      <div id="Ubicacion" class="ubicacion-section">
+        <!--Pais-->
+        <div id="Pais" class="form-group">
+          <label for="country">País</label>
+          <input pInputText id="country" formControlName="country" class="input-text" />
+        </div>
+        <!--Email-->
+        <div id="Email" class="form-group">
+          <label for="email">Email</label>
+          <input pInputText id="email" formControlName="email" class="input-text" />
+        </div>
+        <!--Ciudad-->
+        <div id="Ciudad" class="form-group">
+          <label for="city">Ciudad</label>
+          <input pInputText id="city" formControlName="city" class="input-text" />
+        </div>
+        <!--Provincia-->
+        <div id="Provincia" class="form-group">
+          <label for="province">Provincia</label>
+          <input pInputText id="province" formControlName="state" class="input-text" />
+        </div>
+      </div>
+      
+      <div id="Tarjeta" class="tarjeta-section">
+        <!--Número de Tarjeta de Crédito-->
+        <div class="form-group">
+          <label for="creditCard">Tarjeta de crédito</label>
+          <input pInputText id="creditCard" formControlName="cardNumber" maxlength="16" class="input-text" />
+        </div>
+        <!--Fecha de Vencimiento-->
+        <div class="form-group">
+          <label for="expirationDate">Fecha de Vencimiento</label>
+          <p-calendar 
+          id="expirationDate" 
+          formControlName="expirationDate"
+           [showButtonBar]="true"
+            class="calendar"
+            placeholder="DD/MM/YYYY"></p-calendar>
+        </div>
+      </div>
+      
+      <div id="Seguridad" class="seguridad-section">
+        <!--Código de Seguridad (CVV/CVC)-->
+        <div class="form-group">
+          <label for="cvv">Código de Seguridad (CVV/CVC)</label>
+          <input pInputText id="cvv" formControlName="cvv" type="text" maxlength="4" class="input-text" />
+        </div>
+      </div>
+      
+      <div id="Titular" class="titular-section">
+        <!--Nombre del Titular de la Tarjeta-->
+        <div class="form-group">
+          <label for="cardholder">Nombre del Titular de la Tarjeta</label>
+          <input pInputText id="cardholder" formControlName="cardHolderName" type="text" class="input-text" />
+        </div>
+      </div>
+      
+      <button type="submit" class="submit-button">Submit</button>
+    </div>
+  </form>
+</div>

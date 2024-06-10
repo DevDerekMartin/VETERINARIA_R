@@ -1,0 +1,70 @@
+<div class="body">
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="container">
+        <!-- Imagen del logo -->
+        <div class="logo-section">
+          <img src="../../../assets/zarla-carevet-1x1-2400x2400-20210809-ctbb9btmp84tpccp4hdr.png" alt="Logo" class="logo-image">
+        </div>
+  
+        <!-- Nombre del producto -->
+        <div class="form-group">
+          <label for="productName">Nombre del Producto</label>
+          <textarea pInputTextarea id="productName" formControlName="productName" class="input-text"></textarea>
+        </div>
+  
+        <!-- Asociación -->
+        <div class="form-group">
+          <label for="association">Asociación</label>
+          <textarea pInputTextarea id="association" formControlName="association" class="input-text"></textarea>
+        </div>
+  
+        <!-- Formulación -->
+        <div class="form-group">
+          <label for="formulation">Formulación</label>
+          <textarea pInputTextarea id="formulation" formControlName="formulation" class="input-text"></textarea>
+        </div>
+  
+        <!-- Presentación Comercial -->
+        <div class="form-group">
+          <label for="commercialPresentation">Presentación Comercial</label>
+          <textarea pInputTextarea id="commercialPresentation" formControlName="commercialPresentation" class="input-text"></textarea>
+        </div>
+  
+        <!-- Dosis y Administración -->
+        <div class="form-group">
+          <label for="doseAdministration">Dosis y Administración</label>
+          <textarea pInputTextarea id="doseAdministration" formControlName="doseAdministration" class="input-text"></textarea>
+        </div>
+  
+        <!-- Descripción del Producto -->
+        <div class="form-group">
+          <label for="productDescription">Descripción del Producto</label>
+          <textarea pInputTextarea id="productDescription" formControlName="productDescription" class="input-text"></textarea>
+        </div>
+  
+        <!-- Imagen del Producto -->
+        <div class="form-group">
+          <label for="productImage">Imagen del Producto</label>
+          <p-image src="../../../assets/Antibiotico.jpeg" [preview]="true" alt="Image" width="100" height="100" class="product-image">
+            <ng-template pTemplate="indicator">
+              <i class="pi pi-check"></i>
+            </ng-template>
+          </p-image>
+          <input type="file" formControlName="productImage" class="file-upload" />
+        </div>
+  
+        <!-- Indicaciones -->
+        <div class="form-group">
+          <label for="indications">Indicaciones</label>
+          <textarea pInputTextarea id="indications" formControlName="indications" class="input-text"></textarea>
+        </div>
+  
+        <!-- Botones -->
+        <div class="button-container">
+          <button type="submit" class="submit-button">Agregar Medicamento</button>
+          <button type="button" class="back-button">Retroceder</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
